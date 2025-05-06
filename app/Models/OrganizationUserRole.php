@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\OrganizationUser;
-use App\Models\Role;
+use App\Models\OrganizationRole;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 
 class OrganizationUserRole extends Model
@@ -29,6 +29,6 @@ class OrganizationUserRole extends Model
 
     public function role(): BelongsTo
     {
-        return $this->belongsTo(Role::class);
+        return $this->belongsTo(OrganizationRole::class);
     }
 }

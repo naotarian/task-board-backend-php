@@ -12,10 +12,6 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        \Log::info('LoginController@login', [
-            'username' => $request->username,
-            'password' => $request->password,
-        ]);
         $request->validate([
             'username' => ['required',],
             'password' => ['required'],

@@ -9,7 +9,6 @@ class Authenticate extends Middleware
 {
     protected function redirectTo(Request $request): ?string
     {
-        \Log::info('test');
         return null;
     }
 }
